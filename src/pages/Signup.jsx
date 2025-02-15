@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/signup", { name, email, password });
+      await axios.post("https://login-back-0lpq.onrender.com/signup", { name, email, password });
       alert("Signup successful");
       navigate("/");
     } catch (error) {
