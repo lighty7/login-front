@@ -10,7 +10,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
+      const res = await axios.post("https://login-back-0lpq.onrender.com/login", { email, password });
       alert(res.data.message);
       localStorage.setItem("token", res.data.token);
       navigate("/");
